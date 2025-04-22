@@ -1,0 +1,46 @@
+h1,
+h2 {
+	color: red;
+}
+
+li {
+	color: blueviolet;
+}
+
+.item {
+	color: green;
+	background-color: lightblue;
+	border: 1px solid black;
+}
+
+ol li {
+	color: orangered;
+}
+
+#list-item {
+	color: blue;
+	background-color: lightgreen;
+	border: 1px solid red;
+}
+
+p {
+	color: black;
+	background-color: lightyellow;
+	border: 1px solid blue;
+	text-align: center;
+}
+
+h1 {
+	color: blue;
+	background-color: lightgray;
+	border: 10px solid black;
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+	padding-top: 30px;
+	padding-left: 10px;
+	padding-right: 40px;
+	padding-bottom: 70px;
+}
