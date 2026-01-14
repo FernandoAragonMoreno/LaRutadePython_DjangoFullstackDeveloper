@@ -116,8 +116,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static'
-STATICFILES_DIRS = ['ecommerceproject/static',]
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Carpeta donde Django recopila archivos estáticos para producción
+STATICFILES_DIRS = [BASE_DIR / 'ecommerceproject' / 'static',]  # Carpeta con archivos estáticos del proyecto
+
+# Media files Configuration(Images, Videos, etc.)
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
