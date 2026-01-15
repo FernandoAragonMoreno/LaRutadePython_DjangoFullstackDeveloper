@@ -10,4 +10,4 @@ class UserProfile(models.Model):
   city = models.CharField(max_length=255)
 
   def __str__(self):
-    return self.name
+    return f'Name: {self.name}, Profession: {self.profession}'

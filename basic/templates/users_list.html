@@ -14,35 +14,36 @@
 			<table class="table">
 				<thead>
 					<tr>
-						<th scope="col">ID</th>
-						<th scope="col">User</th>
-						<th scope="col">Profession</th>
-						<th scope="col">Gender</th>
-						<th scope="col">City</th>
+						<th scope="col" class="align-middle">Code</th>
+						<th scope="col" class="align-middle">Photo</th>
+						<th scope="col" class="align-middle">Name</th>
+						<th scope="col" class="align-middle">Profession</th>
+						<th scope="col" class="align-middle">Gender</th>
+						<th scope="col" class="align-middle">City</th>
 					</tr>
 				</thead>
 				<tbody>
+					{% for user in users %}
 					<tr>
-						<th scope="row">001</th>
-						<td>John Patrick</td>
-						<td>Developer</td>
-						<td>Male</td>
-						<td>New York</td>
+						<td class="align-middle text-center">{{ user.code }}</td>
+						<td class="align-middle">
+							<img
+								src="{{ user.photo.url }}"
+								alt="{{ user.name }}"
+								style="
+									width: 40px;
+									height: 40px;
+									border-radius: 20%;
+									object-fit: cover;
+								"
+							/>
+						</td>
+						<td class="align-middle">{{ user.name }}</td>
+						<td class="align-middle">{{ user.profession }}</td>
+						<td class="align-middle">{{ user.gender }}</td>
+						<td class="align-middle">{{ user.city }}</td>
 					</tr>
-					<tr>
-						<th scope="row">002</th>
-						<td>Jane Smith</td>
-						<td>Designer</td>
-						<td>Female</td>
-						<td>Los Angeles</td>
-					</tr>
-					<tr>
-						<th scope="row">003</th>
-						<td>Jim Peterson</td>
-						<td>Architect</td>
-						<td>Male</td>
-						<td>San Francisco</td>
-					</tr>
+					{% endfor %}
 				</tbody>
 			</table>
 		</div>
